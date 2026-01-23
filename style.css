@@ -1,0 +1,598 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* --- MENU --- */
+header {
+    background: #fff;
+    padding: 15px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+/* --- HERO (A PARTE QUE VOCÊ QUERIA AJUSTAR) --- */
+.hero {
+    height: 50vh; /* Altura que definimos */
+    min-height: 400px;
+    /* Substitua pelo nome exato da sua imagem abaixo */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('WhatsApp\ Image\ 2026-01-21\ at\ 19.27.25.jpeg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* BOTÃO COM ANIMAÇÃO */
+.btn-principal {
+    display: inline-block;
+    background: #e67e22;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    transition: 0.3s;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.btn-principal:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
+
+/* ANIMAÇÃO DE FLUTUAR */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero { height: 45vh; }
+    nav ul { display: none; } /* Esconde o menu no celular por enquanto */
+}
+/* --- ESTILO DA HISTÓRIA --- */
+.secao-historia {
+    padding: 80px 10%;
+    background: white;
+}
+
+.container-historia {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.imagem-lado img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px #fef5ec; /* Um detalhe charmoso de fundo */
+}
+
+.texto-lado h2 {
+    color: #e67e22;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.texto-lado .destaque {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.texto-lado p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.btn-secundario {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #e67e22;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    color: #d35400;
+    padding-left: 10px; /* Efeito de movimento ao passar o mouse */
+}
+
+/* AJUSTE PARA CELULAR */
+@media (max-width: 900px) {
+    .container-historia {
+        flex-direction: column;
+        text-align: center;
+    }
+    .imagem-lado img {
+        box-shadow: none; /* Remove a sombra lateral no celular */
+    }
+}
+/* --- ESTILOS DA PÁGINA SOBRE --- */
+.hero-sobre {
+    height: 40vh;
+    background: linear-gradient(rgba(104, 73, 46, 0.9), rgba(98, 71, 53, 0.9)), url('WhatsApp\ Image\ 2026-01-21\ at\ 19.27.25.jpeg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.conteudo-sobre {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background: white;
+}
+
+.texto-historia-completa p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.box-destaque {
+    background: #fef5ec;
+    border-left: 5px solid #e67e22;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.box-destaque p {
+    margin-bottom: 0;
+    color: #d35400;
+    font-weight: 500;
+}
+
+.lista-ajuda {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.lista-ajuda li {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chamada-final {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+
+.chamada-final strong {
+    font-size: 1.4rem;
+    color: #e67e22;
+}
+
+@media (max-width: 600px) {
+    .lista-ajuda { grid-template-columns: 1fr; }
+}
+/* --- ESTILO DA GALERIA DE ANIMAIS --- */
+.nossos-animais {
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cabecalho-animais h2 {
+    color: #e67e22;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.links-navegacao-animais {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.links-navegacao-animais a {
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.links-navegacao-animais a:hover {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+.divisor { color: #ccc; }
+
+/* OS CARDS */
+.galeria-animais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.animal-card {
+    background: white;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Faz o efeito "pular" */
+}
+
+/* EFEITO DE PULAR AO PASSAR O MOUSE */
+.animal-card:hover {
+    transform: translateY(-15px); /* Sobe o card */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Sombra mais profunda */
+}
+
+.foto-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.animal-card:hover .foto-container img {
+    transform: scale(1.1); /* Zoom suave na foto ao passar o mouse */
+}
+
+.info-animal {
+    padding: 20px;
+}
+
+.info-animal h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-animal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.btn-perfil {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #e67e22;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-perfil:hover {
+    background: #e67e22;
+    color: white;
+}
+/* --- ESTILO SEÇÃO PIX --- */
+.secao-pix {
+    padding: 80px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container-doacao h2 {
+    color: #e67e22;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.card-pix-principal {
+    max-width: 550px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.topo-verde {
+    background-color: #27ae60;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.conteudo-branco {
+    background: white;
+    padding: 40px 30px;
+}
+
+.chave-area {
+    background: #f8f9fa;
+    border: 2px dashed #27ae60;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: #27ae60;
+    font-size: 1.2rem;
+    word-break: break-all; /* Garante que o e-mail não quebre o layout no celular */
+}
+
+.nome-titular {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.btn-copiar {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-copiar:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+}
+
+.outras-formas {
+    margin-top: 30px;
+    color: #666;
+    font-style: italic;
+}
+/* --- ESTILO IMPACTO DA DOAÇÃO --- */
+.secao-impacto {
+    padding: 60px 10%;
+    background-color: #fef8f3; /* Um bege bem clarinho para destacar */
+    text-align: center;
+}
+
+.secao-impacto h2 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.lista-impacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.item-impacto {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 50px; /* Deixa as bordas bem arredondadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.item-impacto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.valor-laranja {
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    min-width: 100px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+.item-impacto p {
+    color: #555;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .item-impacto {
+        flex-direction: column;
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    .valor-laranja {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .item-impacto p {
+        text-align: center;
+    }
+}
+/* --- ESTILO DA PÁGINA DE PERFIL INDIVIDUAL --- */
+.perfil-animal-detalhe {
+    padding: 100px 10% 50px;
+    background-color: #fff;
+}
+
+.container-perfil {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.galeria-fotos {
+    flex: 1;
+}
+
+.foto-principal {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.texto-perfil {
+    flex: 1;
+}
+
+.texto-perfil h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tag-status {
+    background: #27ae60;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.ficha-tecnica {
+    background: #fdf2e9;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.ficha-tecnica p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .container-perfil {
+        flex-direction: column;
+    }
+    .foto-principal {
+        max-width: 100%;
+    }
+}
+.secao-galeria-completa {
+    padding: 100px 10% 60px;
+    background-color: #fef8f3;
+    min-height: 80vh;
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-pagina h1 {
+    color: #e67e22;
+    font-size: 2.5rem;
+}
+
+.titulo-pagina p {
+    color: #666;
+    margin-top: 10px;
+}
