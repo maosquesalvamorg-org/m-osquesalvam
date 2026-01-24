@@ -896,3 +896,300 @@ li {
     .secao-meta h3 { font-size: 1.1rem; }
     .status-meta { font-size: 0.9rem; }
 }
+.meta-container-topo {
+    background: rgba(255, 255, 255, 0.15); /* Fundo semi-transparente para o Hero */
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 450px;
+    backdrop-filter: blur(5px);
+}
+
+.barra-externa {
+    background-color: #ddd;
+    border-radius: 20px;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.barra-interna-animada {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: width 1.5s ease-in-out;
+}
+
+/* O brilho que se movimenta */
+.brilho-movimento {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: mover-barra 2s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes mover-barra {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+.valor-meta {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    font-weight: bold;
+}
+/* Container que segura tudo lá em cima */
+.meta-container-topo {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+    color: white; /* Para destacar o texto no fundo do cachorro */
+}
+
+/* A parte de fora da barra */
+.barra-externa {
+    background-color: rgba(255, 255, 255, 0.3); /* Cinza clarinho transparente */
+    border-radius: 20px;
+    height: 30px; /* Um pouco mais grossa para caber o número */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* A parte laranja que cresce */
+.barra-interna-animada {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o número */
+    transition: width 1.5s ease-in-out;
+    z-index: 1;
+}
+
+/* O texto da porcentagem (ex: 65%) */
+.porcentagem-numero {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 3; /* Fica acima das listras */
+    position: relative;
+}
+
+/* O movimento das listras (igual o da foto de baixo) */
+.brilho-movimento {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: mover-barra 2s linear infinite;
+    z-index: 2;
+}
+
+@keyframes mover-barra {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+.meta-container-topo {
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.titulo-meta-topo {
+    font-size: 1.1rem;
+    color: #333; /* Cor escura para aparecer bem no fundo claro */
+    margin-bottom: 10px;
+}
+
+.barra-externa {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    height: 30px; /* Altura ideal para o número aparecer */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.barra-interna-animada {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o 65% */
+    position: relative;
+    transition: width 1.5s ease-in-out;
+}
+
+.porcentagem-numero {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 5; /* Garante que fique na frente das listras */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Melhora a leitura */
+}
+
+.brilho-movimento {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: mover-barra 2s linear infinite;
+    z-index: 1; /* Fica atrás do número */
+}
+
+@keyframes mover-barra {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+/* Limita a altura do cabeçalho para ele não descer muito */
+header nav {
+    height: auto;
+    min-height: 70px; /* Tamanho padrão */
+    padding: 10px 20px;
+}
+
+/* Estilo do container da meta para não esticar a barra branca */
+.meta-container-topo {
+    background-color: #fff; /* Fundo branco sólido */
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0; /* Linha sutil para separar do Hero */
+}
+
+/* Faz o texto da meta aparecer com cor forte */
+.meta-texto-visivel {
+    color: #4a2c16 !important; /* Marrom escuro para contraste total */
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block; /* Garante que ele ocupe o espaço dele */
+}
+
+.meta-valores {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Garante que o 65% fique centralizado e visível */
+.porcentagem-numero {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    z-index: 10;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.meta-clean {
+    background: none !important; /* Remove o quadrado branco/cinza */
+    border: none !important;     /* Remove qualquer borda */
+    box-shadow: none !important; /* Remove a sombra que cria o contraste */
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+.meta-titulo {
+    color: #4a2c16; /* Marrom para combinar com sua logo */
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.barra-externa {
+    background-color: #eee; /* Cor de fundo da parte não preenchida (cinza bem claro) */
+    border-radius: 20px;
+    height: 26px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-interna-animada {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+}
+
+.porcentagem-numero {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    z-index: 10;
+}
+
+/* O movimento das listras que você gostou */
+.brilho-movimento {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image: linear-gradient(
+        -45deg, 
+        rgba(255, 255, 255, .2) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255, 255, 255, .2) 50%, 
+        rgba(255, 255, 255, .2) 75%, 
+        transparent 75%, 
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: mover-barra 2s linear infinite;
+}
+
+@keyframes mover-barra {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+.meta-valores {
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
