@@ -850,56 +850,38 @@ li {
     60% { transform: translateX(0); }
 }
 header nav {
+    position: relative; /* Isso é a base para o GIF flutuar */
     display: flex;
-    justify-content: space-between; /* Título de um lado, menu do outro */
+    flex-direction: column; /* No celular os itens ficam um embaixo do outro */
     align-items: center;
-    padding: 10px 5%;
+    padding: 15px 10px;
     background-color: white;
 }
 
-.conteudo-central {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Espaço entre o GIF e o texto */
-}
-
-.gif-interativo {
-    width: 50px; /* Tamanho ideal para não ocupar muito espaço */
+.gif-canto-celular {
+    position: absolute; /* Faz o GIF flutuar */
+    left: 5px;          /* Cola no canto esquerdo */
+    top: 5px;           /* Cola no topo */
+    width: 60px;        /* Tamanho menor para celular */
     height: auto;
-    /* Se o GIF tiver fundo branco e a barra for branca, ele some no fundo */
+    z-index: 10;        /* Garante que fique por cima de tudo */
 }
 
-.titulo-ong {
-    font-size: 1.5rem;
-    color: #8b4513; /* Marrom padrão do seu projeto */
-    margin: 0;
-}
-header nav {
-    display: flex;
-    justify-content: space-between; /* Empurra o menu para a direita e o GIF para a esquerda */
-    align-items: center;
-    padding: 5px 15px;
-    background: white;
-    height: 60px; /* Altura fixa para o cabeçalho não pular */
-}
-
-.gif-no-canto {
-    display: flex;
-    align-items: center;
-    width: 80px; /* Define um espaço reservado para o GIF */
-}
-
-.gif-interativo {
-    width: 100%; /* O GIF preenche os 80px acima */
-    height: auto;
-    object-fit: contain;
+/* Ajuste para telas maiores (Computador) */
+@media (min-width: 768px) {
+    header nav {
+        flex-direction: row; /* Volta a ser lado a lado no PC */
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    
+    .gif-canto-celular {
+        width: 80px; /* Um pouco maior no PC */
+        left: 20px;
+    }
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: #8b4513;
-    flex-grow: 1; /* Faz o título ocupar o espaço central */
-    text-align: left; /* Mantém o texto perto do GIF */
-    margin-left: 10px;
+    font-size: 1.2rem;
+    margin: 10px 0; /* Dá um respiro para o título */
 }
