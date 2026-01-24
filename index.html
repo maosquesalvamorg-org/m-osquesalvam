@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mãos que Salvam | Refúgio Animal</title>
+   
 </div>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="paws.png">
@@ -11,18 +12,27 @@
 <body>
 
     <header>
-    <nav>
-        <img src="bebé-greygrey.webp" alt="Pets" class="gif-canto-celular">
-        
-        <div class="logo">Mãos Que Salvam</div>
-        
-        <ul>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="#ajudar">Como Ajudar</a></li>
-            <li><a href="galeria.html">Animais</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <div class="logo">🐾 Mãos Que Salvam</div>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#ajudar">Como Ajudar</a></li>
+                <li><a href="galeria.html">Nossos Animais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="secao-meta">
+    <div class="container-meta">
+        <h3>Meta Mensal: Ração para os 120 protegidos 🐾</h3>
+        <div class="barra-fundo">
+            <div class="barra-progresso" id="progresso-meta">
+                <span class="porcentagem">65%</span>
+            </div>
+        </div>
+        <p class="status-meta"><strong>R$ 1.950,00</strong> arrecadados de <strong>R$ 3.000,00</strong></p>
+    </div>
+</section>
 
     <section class="hero">
         <div class="hero-content">
@@ -188,5 +198,14 @@
         });
     }
     </script>
+
+    <script>
+    // Esse código limpa a "âncora" da URL e joga o scroll para o topo
+    if (window.location.hash) {
+        window.scrollTo(0, 0);
+        history.replaceState("", document.title, window.location.pathname);
+    }
+</script>
+
 </body>
 </html>

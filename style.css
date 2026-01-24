@@ -849,39 +849,50 @@ li {
     50% { transform: translateX(-25px) scale(1.1); }
     60% { transform: translateX(0); }
 }
-header nav {
-    position: relative; /* Isso é a base para o GIF flutuar */
+.secao-meta {
+    padding: 20px;
+    background-color: #fffaf5; /* Um creme bem clarinho */
+    text-align: center;
+}
+
+.container-meta {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.barra-fundo {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.barra-progresso {
+    background: linear-gradient(90deg, #f39c12, #e67e22); /* Laranja vibrante */
+    height: 100%;
+    width: 65%; /* ESTE VALOR VOCÊ MUDA CONFORME AS DOAÇÕES SOBEM */
     display: flex;
-    flex-direction: column; /* No celular os itens ficam um embaixo do outro */
     align-items: center;
-    padding: 15px 10px;
-    background-color: white;
+    justify-content: center;
+    transition: width 1s ease-in-out;
 }
 
-.gif-canto-celular {
-    position: absolute; /* Faz o GIF flutuar */
-    left: 5px;          /* Cola no canto esquerdo */
-    top: 5px;           /* Cola no topo */
-    width: 60px;        /* Tamanho menor para celular */
-    height: auto;
-    z-index: 10;        /* Garante que fique por cima de tudo */
+.porcentagem {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
-/* Ajuste para telas maiores (Computador) */
-@media (min-width: 768px) {
-    header nav {
-        flex-direction: row; /* Volta a ser lado a lado no PC */
-        justify-content: space-between;
-        padding: 10px 50px;
-    }
-    
-    .gif-canto-celular {
-        width: 80px; /* Um pouco maior no PC */
-        left: 20px;
-    }
+.status-meta {
+    font-size: 1rem;
+    color: #555;
 }
 
-.logo {
-    font-size: 1.2rem;
-    margin: 10px 0; /* Dá um respiro para o título */
+/* Ajuste para celular */
+@media (max-width: 480px) {
+    .secao-meta h3 { font-size: 1.1rem; }
+    .status-meta { font-size: 0.9rem; }
 }
