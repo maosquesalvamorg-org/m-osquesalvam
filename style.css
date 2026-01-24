@@ -62,7 +62,7 @@ nav ul li a:hover {
     min-height: 400px;
     /* Substitua pelo nome exato da sua imagem abaixo */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('WhatsApp\ Image\ 2026-01-21\ at\ 19.27.25.jpeg') center/cover no-repeat;
+                url('Max.JPG') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +183,7 @@ nav ul li a:hover {
 /* --- ESTILOS DA PÁGINA SOBRE --- */
 .hero-sobre {
     height: 40vh;
-    background: linear-gradient(rgba(104, 73, 46, 0.9), rgba(98, 71, 53, 0.9)), url('WhatsApp\ Image\ 2026-01-21\ at\ 19.27.25.jpeg') center/cover;
+    background: linear-gradient(rgba(104, 73, 46, 0.9), rgba(98, 71, 53, 0.9)), url('Max.JPG') center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -693,4 +693,213 @@ nav ul li a:hover {
         font-size: 1.2rem !important;
         margin-bottom: 5px !important;
     }
+}
+/* Este código força o tamanho pequeno tanto para 'btn-doar' quanto para 'btn-principal' */
+.btn-doar, .btn-principal {
+    display: inline-block !important;
+    width: auto !important; /* Faz o botão parar de esticar */
+    padding: 10px 15px !important; /* Deixa ele baixinho e elegante */
+    font-size: 13px !important; /* Letra menor para combinar */
+    border-radius: 20px !important;
+    text-align: center !important;
+    margin: 5px 0 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* Garante que a lista não empurre o botão para os lados */
+li {
+    list-style: none !important;
+}
+/* Limpa a bagunça dos botões duplos e ajusta o tamanho */
+.lista-doacoes li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-bottom: 20px !important;
+    list-style: none !important;
+}
+
+.btn-doar {
+    display: inline-block !important;
+    padding: 8px 15px !important; /* Tamanho menor */
+    width: 110px !important; /* Largura fixa para ficarem iguais */
+    text-align: center !important;
+    background-color: #e67e22 !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* Remove qualquer link sublinhado que tenha sobrado */
+.lista-doacoes a {
+    text-decoration: none !important;
+}
+/* Container que esconde o que sobra */
+.carrossel {
+    width: 100%;
+    height: 200px; /* Ajuste a altura conforme suas fotos */
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Faixa que contém todas as fotos lado a lado */
+.fotos-passando {
+    display: flex;
+    width: 300%; /* Se tiver 3 fotos, use 300% */
+    animation: deslizar 10s infinite; /* 10 segundos para o ciclo total */
+}
+
+.fotos-passando img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Não deixa a foto esticar */
+}
+
+/* A Mágica do Movimento */
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); }    /* Fica parado na foto 1 */
+    33% { transform: translateX(-33.33%); } /* Muda para foto 2 */
+    63% { transform: translateX(-33.33%); } /* Fica parado na foto 2 */
+    66% { transform: translateX(-66.66%); } /* Muda para foto 3 */
+    96% { transform: translateX(-66.66%); } /* Fica parado na foto 3 */
+    100% { transform: translateX(0); }      /* Volta para o começo */
+}
+/* Garante que o card seja um bloco sólido */
+.card-animal {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; /* Corta o que sobrar das fotos */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.carrossel {
+    width: 100% !important;
+    height: 250px !important; /* Altura fixa para não bagunçar */
+    position: relative;
+}
+
+.fotos-passando {
+    display: flex;
+    width: 300%; /* Espaço para 3 fotos lado a lado */
+    height: 100%;
+    animation: deslizar 10s infinite;
+}
+
+.fotos-passando img {
+    width: 33.333% !important; /* Cada foto ocupa 1/3 do container de 300% */
+    height: 100% !important;
+    object-fit: cover !important; /* Ajusta a foto sem esticar */
+}
+
+/* Espaçamento do texto abaixo das fotos */
+.info-animal {
+    padding: 15px;
+    text-align: center;
+}
+.cabecalho-principal {
+    position: relative; /* Necessário para os pets não fugirem */
+    overflow: hidden;   /* Corta os pets se eles saírem da barra branca */
+    background: white;
+    padding: 10px 0;
+}
+
+.palco-pets {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Deixa você clicar no menu mesmo com os pets por cima */
+}
+
+.pet-interativo {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 5px;
+}
+
+/* O Gato fica na esquerda e pula */
+.gato-brincalhao {
+    left: 5%;
+    animation: gato-interage 4s infinite ease-in-out;
+}
+
+/* O Cão fica na direita e corre em direção ao gato */
+.cao-brincalhao {
+    right: 5%;
+    animation: cao-interage 4s infinite ease-in-out;
+}
+
+/* Animação do Gato: Ele olha e pula de alegria */
+@keyframes gato-interage {
+    0%, 100% { transform: scaleX(-1) translateY(0); } /* scaleX(-1) faz ele olhar para a direita */
+    45% { transform: scaleX(-1) translateY(0); }
+    50% { transform: scaleX(-1) translateY(-15px) rotate(10deg); }
+    55% { transform: scaleX(-1) translateY(0); }
+}
+
+/* Animação do Cão: Ele corre um pouco para a esquerda e abana */
+@keyframes cao-interage {
+    0%, 100% { transform: translateX(0); }
+    40% { transform: translateX(-20px) rotate(-5deg); }
+    50% { transform: translateX(-25px) scale(1.1); }
+    60% { transform: translateX(0); }
+}
+header nav {
+    display: flex;
+    justify-content: space-between; /* Título de um lado, menu do outro */
+    align-items: center;
+    padding: 10px 5%;
+    background-color: white;
+}
+
+.conteudo-central {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o GIF e o texto */
+}
+
+.gif-interativo {
+    width: 50px; /* Tamanho ideal para não ocupar muito espaço */
+    height: auto;
+    /* Se o GIF tiver fundo branco e a barra for branca, ele some no fundo */
+}
+
+.titulo-ong {
+    font-size: 1.5rem;
+    color: #8b4513; /* Marrom padrão do seu projeto */
+    margin: 0;
+}
+header nav {
+    display: flex;
+    justify-content: space-between; /* Empurra o menu para a direita e o GIF para a esquerda */
+    align-items: center;
+    padding: 5px 15px;
+    background: white;
+    height: 60px; /* Altura fixa para o cabeçalho não pular */
+}
+
+.gif-no-canto {
+    display: flex;
+    align-items: center;
+    width: 80px; /* Define um espaço reservado para o GIF */
+}
+
+.gif-interativo {
+    width: 100%; /* O GIF preenche os 80px acima */
+    height: auto;
+    object-fit: contain;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #8b4513;
+    flex-grow: 1; /* Faz o título ocupar o espaço central */
+    text-align: left; /* Mantém o texto perto do GIF */
+    margin-left: 10px;
 }

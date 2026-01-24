@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! | Mãos Que Salvam 🐾</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="paws.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🐾 Mãos Que Salvam</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 40px 20px;">
+        <h1 style="color: #e67e22; font-size: 2rem;">Coração Aquecido! ❤️</h1>
+        
+        <div style="min-height: 80px; margin: 20px 0;">
+            <p id="mensagem-agradecimento" style="font-size: 1.1rem; color: #444; line-height: 1.6;">
+                Obrigado por sua generosidade!
+            </p>
+        </div>
+
+        <div style="background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: inline-block; max-width: 350px; width: 100%;">
+            <h2 style="font-size: 0.9rem; color: #888; margin-bottom: 5px; text-transform: uppercase;">Chave PIX da ONG</h2>
+            <p id="chave-pix" style="font-weight: bold; font-size: 1.1rem; color: #333; margin-bottom: 20px;">maosquesalvam.org@gmail.com</p>
+            
+            <button onclick="copiarPix()" style="background-color: #27ae60; color: white; border: none; padding: 12px 20px; border-radius: 30px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s;">
+                📋 Copiar Chave PIX
+            </button>
+            
+            <p id="aviso" style="color: #27ae60; font-size: 0.85rem; margin-top: 10px; display: none; font-weight: bold;">✅ Chave copiada! Agora é só colar no seu banco.</p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="index.html" style="text-decoration: none; color: #e67e22; font-weight: bold;">← Voltar ao site</a>
+        </div>
+    </main>
+
+   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const valor = urlParams.get('valor');
+    const msg = document.getElementById('mensagem-agradecimento');
+
+    // Lógica para os 6 valores da sua tabela
+    if (valor === '15') {
+        msg.innerHTML = "Com <strong>R$ 15</strong>, você garante a ração de um peludinho por um dia inteiro! 🐶";
+    } else if (valor === '30') {
+        msg.innerHTML = "Sua doação de <strong>R$ 30</strong> garante ração e cuidados básicos por uma semana. Você é incrível! ❤️";
+    } else if (valor === '75') {
+        msg.innerHTML = "Uau! Com <strong>R$ 75</strong>, conseguimos comprar um saco de ração de 10kg para nossos resgatados. 🏥";
+    } else if (valor === '150') {
+        msg.innerHTML = "Sua contribuição de <strong>R$ 150</strong> cobre vacinas e vermífugos para 4 animais! Gratidão total! 🐾";
+    } else if (valor === '350') {
+        msg.innerHTML = "Com <strong>R$ 350</strong>, você está financiando uma castração e ajudando a controlar o abandono. Um gesto nobre! ✨";
+    } else if (valor === '750') {
+        msg.innerHTML = "Incrível! <strong>R$ 750</strong> ajudam no tratamento médico complexo ou na reforma de um dos nossos canis. Você é um anjo! 👼";
+    } else {
+        msg.innerHTML = "Sua generosidade é o que mantém nosso abrigo de portas abertas em Xapuri! ❤️";
+    }
+
+    // Função de Copiar o PIX
+    function copiarPix() {
+        const textoParaCopiar = document.getElementById('chave-pix').innerText;
+        navigator.clipboard.writeText(textoParaCopiar).then(() => {
+            const aviso = document.getElementById('aviso');
+            aviso.style.display = 'block';
+            setTimeout(() => { aviso.style.display = 'none'; }, 4000);
+        });
+    }
+</script>
+
+</body>
+</html>
