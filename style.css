@@ -1124,72 +1124,35 @@ header nav {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 .meta-clean {
-    background: none !important; /* Remove o quadrado branco/cinza */
-    border: none !important;     /* Remove qualquer borda */
-    box-shadow: none !important; /* Remove a sombra que cria o contraste */
+    background: transparent !important;
     text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 550px;
+    padding: 5px 10px; /* Reduzi drasticamente o espaço interno */
+    margin: 5px auto;  /* Reduzi o espaço entre a barra e o resto do site */
+    width: 90%;
+    max-width: 500px;
+    display: block !important;
 }
 
 .meta-titulo {
-    color: #4a2c16; /* Marrom para combinar com sua logo */
-    font-size: 1rem;
-    margin-bottom: 12px;
+    color: #4a2c16 !important;
+    font-size: 0.9rem; /* Diminuí um pouco a letra para ganhar espaço */
+    font-weight: bold;
+    margin-bottom: 5px; /* Título mais colado na barra */
+    margin-top: 0;      /* Remove espaço no topo */
 }
 
 .barra-externa {
-    background-color: #eee; /* Cor de fundo da parte não preenchida (cinza bem claro) */
+    background-color: #f0f0f0 !important;
     border-radius: 20px;
-    height: 26px;
+    height: 22px; /* Deixei a barra um pouco mais fina */
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.barra-interna-animada {
-    background: linear-gradient(90deg, #f39c12, #e67e22);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 20px;
-}
-
-.porcentagem-numero {
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    z-index: 10;
-}
-
-/* O movimento das listras que você gostou */
-.brilho-movimento {
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background-image: linear-gradient(
-        -45deg, 
-        rgba(255, 255, 255, .2) 25%, 
-        transparent 25%, 
-        transparent 50%, 
-        rgba(255, 255, 255, .2) 50%, 
-        rgba(255, 255, 255, .2) 75%, 
-        transparent 75%, 
-        transparent
-    );
-    background-size: 50px 50px;
-    animation: mover-barra 2s linear infinite;
-}
-
-@keyframes mover-barra {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
-}
-
 .meta-valores {
-    color: #888;
-    font-size: 0.85rem;
-    margin-top: 8px;
+    color: #555 !important;
+    font-size: 0.8rem;
+    margin-top: 4px; /* Aproximou os valores da barra */
+    margin-bottom: 0;
 }
