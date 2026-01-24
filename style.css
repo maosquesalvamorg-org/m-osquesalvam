@@ -1126,7 +1126,7 @@ header nav {
 .meta-clean {
     background: transparent !important;
     text-align: center;
-    padding: 5px 10px; /* Reduzi drasticamente o espaço interno */
+    padding: 5px 5px; /* Reduzi drasticamente o espaço interno */
     margin: 5px auto;  /* Reduzi o espaço entre a barra e o resto do site */
     width: 90%;
     max-width: 500px;
