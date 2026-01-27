@@ -1587,3 +1587,69 @@ header nav {
     background-color: #d35400; /* Escurece ao passar o mouse */
     transform: scale(1.1);
 }
+/* Configuração Geral do Rodapé */
+.rodape-principal {
+    background-color: #161515; /* Ou a cor que você já estiver usando */
+    color: white;
+    padding: 40px 0 20px;
+    font-family: sans-serif;
+}
+
+/* Container que organiza as colunas */
+.container-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Estilo para cada coluna */
+.coluna-rodape {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+}
+
+/* AJUSTES PARA CELULAR (Onde ele estava "pelado") */
+@media (max-width: 768px) {
+    .container-rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .coluna-rodape {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 25px;
+        width: 100%;
+    }
+
+    .coluna-rodape:last-child {
+        border-bottom: none;
+    }
+
+    /* Animação nos ícones sociais ao tocar */
+    .img-social:active {
+        transform: scale(1.2) rotate(5deg);
+        filter: brightness(1.2);
+    }
+}
+
+/* Animação de Entrada (Fade In suave) */
+.rodape-principal {
+    animation: fadeInRodape 1s ease-in-out;
+}
+
+@keyframes fadeInRodape {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efeito Hover nos links de contato */
+.lista-contato li a:hover {
+    color: #e67e22;
+    padding-left: 5px;
+    transition: 0.3s;
+}
