@@ -20,74 +20,138 @@
     </header>
 
     <section class="secao-galeria-completa">
-        <div class="titulo-pagina">
-            <h1>Conheça nossos amigos</h1>
-            <p>Clique no perfil de cada um para conhecer sua história e personalidade.</p>
+    <div class="titulo-pagina">
+        <h1>Conheça nossos amigos</h1>
+        <p>Clique no perfil de cada um para conhecer sua história e personalidade.</p>
+    </div>
+
+    <div class="galeria-animais">
+        
+        <div class="animal-card">
+            <div class="foto-container"><img src="Max.JPG" alt="Max"loading="lazy"></div>
+            <div class="info-animal">
+                <h3>Max</h3>
+                <p>Um Caramelo doce e brincalhão.</p>
+                <button class="btn-perfil" onclick="abrirModal('Max', '2 anos', 'Médio', 'Max.JPG', 'O Max foi resgatado faminto numa estrada de Xapuri...')">Ver Perfil</button>
+            </div>
         </div>
 
-        <div class="galeria-animais">
-            <div class="animal-card">
-                <div class="foto-container">
-                    <div class="card-animal">
-    <div class="carrossel">
-        <div class="fotos-passando">
-            <img src="Max.JPG" alt="Max foto 1">
-            <img src="" alt="Max foto 2">
-            <img src="" alt="Max foto 3">
+        <div class="animal-card">
+            <div class="foto-container"><img src="Luna.JPG" alt="Luna"loading="lazy"></div>
+            <div class="info-animal">
+                <h3>Luna</h3>
+                <p>Dócil, calma e muito silenciosa.</p>
+                <button class="btn-perfil" onclick="abrirModal('Luna', '5 anos', 'Pequeno', 'Luna.JPG', 'A Luna é uma cadelinha sénior...')">Ver Perfil</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="foto-container"><img src="BRANQUELO.JPG" alt="Branquelo"loading="lazy"></div>
+            <div class="info-animal">
+                <h3>Branquelo</h3>
+                <p>Um olhar atento e cheio de gratidão.</p>
+                <button class="btn-perfil" onclick="abrirModal('Branquelo', '3 anos', 'Médio', 'BRANQUELO.JPG', 'O Branquelo é um cão muito sociável...')">Ver Perfil</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="foto-container"><img src="THOR.JPG" alt="Thor"loading="lazy"></div>
+            <div class="info-animal">
+                <h3>Thor</h3>
+                <p>O guardião oficial da nossa sede.</p>
+                <button class="btn-perfil" onclick="abrirModal('Thor', '4 anos', 'Médio/Grande', 'THOR.JPG', 'O Thor é a cara do nosso projeto...')">Ver Perfil</button>
+            </div>
+        </div>
+
+        <div class="animal-card">
+            <div class="foto-container"><img src="SALSICHINHA.JPG" alt="Salsichinha"loading="lazy"></div>
+            <div class="info-animal">
+                <h3>Salsichinha</h3>
+                <p>Pequena no tamanho, gigante no carinho.</p>
+                <button class="btn-perfil" onclick="abrirModal('Salsichinha', '2 anos', 'Pequeno', 'SALSICHINHA.JPG', 'A Salsichinha é pura doçura...')">Ver Perfil</button>
+            </div>
+        </div>
+
+    </div> <div id="modal-pet" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <div id="detalhes-pet"></div>
         </div>
     </div>
-    
-</div>
-                </div>
-                <div class="info-animal">
-                    <h3>Max</h3>
-                    <p>Um Caramelo doce que adora carinho e brincar de bolinha.</p>
-                    <a href="max.html" class="btn-perfil">Ver Perfil</a>
-                </div>
-            </div>
+</section>
 
-            <div class="animal-card">
-                <div class="foto-container">
-                    <div class="card-animal">
-    <div class="carrossel">
-        <div class="fotos-passando">
-            <img src="Luna.JPG" alt="luna foto 1">
-            <img src="foto-dog1-2.jpg" alt="luna foto 2">
-            <img src="foto-dog1-3.jpg" alt="luna foto 3">
+    <footer class="rodape-principal">
+    <div class="container-rodape">
+        
+        <div class="coluna-rodape">
+            <h3>🐾 Mãos Que Salvam</h3>
+            <p>Transformando dor em esperança em Xapuri-AC há mais de 11 anos.</p>
+            <p class="cnpj"><strong>CNPJ:</strong> 00.000.000/0001-00</p> </div>
+
+        <div class="coluna-rodape">
+            <h3>Contato</h3>
+            <ul class="lista-contato">
+                <li><a href="https://wa.me/5568999999999" target="_blank">📞 (68) 99999-9999</a></li>
+                <li><a href="mailto:doecasacanina@gmail.com">✉️ doecasacanina@gmail.com</a></li>
+                <li>📍 Xapuri, Acre - Brasil</li>
+            </ul>
         </div>
+
+       <div class="coluna-rodape">
+    <h3>Siga nossa rotina</h3>
+    <div class="redes-sociais-icones">
+        <a href="https://www.instagram.com/maosquesalvam.ong?igsh=dW4ybzlraGU5ZXZ4" target="_blank" class="link-icone">
+            <img src="icons8-instagram-48.png" alt="Siga-nos no Instagram" class="img-social">
+        </a>
+
+        <a href="LINK_DO_FACEBOOK_AQUI" target="_blank" class="link-icone">
+            <img src="icons8-facebook-novo-48.png" alt="Siga-nos no Facebook" class="img-social">
+        </a>
     </div>
 </div>
-                </div>
-                <div class="info-animal">
-                    <h3>Luna</h3>
-                    <p>Dócil e silenciosa, a Luna procura um lar tranquilo.</p>
-                    <a href="luna.html" class="btn-perfil">Ver Perfil</a>
-                </div>
-            </div>
 
-            <div class="animal-card">
-                <div class="foto-container">
-                   <div class="card-animal">
-    <div class="carrossel">
-        <div class="fotos-passando">
-            <img src="Thor.JPG" alt="thor foto 1">
-            <img src="foto-dog1-2.jpg" alt="thor foto 2">
-            <img src="foto-dog1-3.jpg" alt="thor foto 3">
-        </div>
     </div>
-</div>
-                </div>
-                <div class="info-animal">
-                    <h3>Thor</h3>
-                    <p>Protetor e muito inteligente. Ótimo companheiro.</p>
-                    <a href="thor.html" class="btn-perfil">Ver Perfil</a>
-                </div>
-            </div>
 
-            </div>
-    </section>
-    <footer>
-        <p>© 2026 Mãos Que Salvam - Xapuri, AC. 🐾</p>
-    </footer>
+    <div class="copyright">
+        <p>&copy; 2026 Mãos Que Salvam - Criado com amor pelos animais.</p>
+    </div>
+</footer>
+
+<script>
+function abrirModal(nome, idade, porte, imagem, historia) {
+    const modal = document.getElementById("modal-pet");
+    const detalhes = document.getElementById("detalhes-pet");
+
+    detalhes.innerHTML = `
+        <img src="${imagem}" style="width:100%; border-radius:15px; height:250px; object-fit:cover;">
+        <h2 style="color:#2e8b57; margin-top:15px;">${nome} 🐾</h2>
+        <div style="display:flex; gap:10px; margin:10px 0;">
+            <span style="background:#eef7f2; color:#2e8b57; padding:5px 10px; border-radius:20px; font-weight:bold; font-size:12px;">Idade: ${idade}</span>
+            <span style="background:#eef7f2; color:#2e8b57; padding:5px 10px; border-radius:20px; font-weight:bold; font-size:12px;">Porte: ${porte}</span>
+        </div>
+        <p style="line-height:1.6; color:#555;">${historia}</p>
+        <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
+        <a href="https://wa.me/5568999999999?text=Olá! Quero saber mais sobre o ${nome}" target="_blank" 
+           style="display:block; text-align:center; background:#27ae60; color:white; text-decoration:none; padding:12px; border-radius:8px; font-weight:bold;">
+           Quero adotar o ${nome}
+        </a>
+    `;
+
+    modal.style.display = "block";
+}
+
+function fecharModal() {
+    document.getElementById("modal-pet").style.display = "none";
+}
+
+// Fecha se a pessoa clicar fora da caixa branca
+window.onclick = function(event) {
+    const modal = document.getElementById("modal-pet");
+    if (event.target == modal) { modal.style.display = "none"; }
+}
+</script>
+
+<button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao topo">⬆️</button>
+
 </body>
 </html>

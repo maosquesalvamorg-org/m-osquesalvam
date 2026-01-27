@@ -16,7 +16,6 @@
             <div class="logo">🐾 Mãos Que Salvam</div>
             <ul>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="#ajudar">Como Ajudar</a></li>
                 <li><a href="galeria.html">Nossos Animais</a></li>
             </ul>
         </nav>
@@ -145,64 +144,124 @@
         </div>
     </section>
 
-    <section id="ajudar" class="secao-pix">
-        <div class="container-doacao">
-            <h2>Como Ajudar 🧡</h2>
-            <p>Sua doação se transforma em alimento, remédio e dignidade.</p>
-
-            <div class="card-pix-principal">
-                <div class="topo-verde">
-                    <span>Chave PIX Oficial</span>
+    <section class="apoio-pix" id="ajudar">
+        <div class="container-pix">
+            <h2>Passos para apoiar a causa:</h2>
+            
+            <div class="grid-passos">
+                <div class="item-passo">
+                    <div class="numero">1</div>
+                    <p>Clique no botão <strong>"Copiar Chave"</strong> logo abaixo.</p>
                 </div>
-                <div class="conteudo-branco">
-                    <p>Use o e-mail abaixo para realizar sua doação de qualquer valor:</p>
-                    <div class="chave-area">
-                        <strong id="chave-pix">maosquesalvam.org@gmail.com</strong>
-                    </div>
-                    <p class="nome-titular">Titular: Jorge De Melo Sá
-                    </p>
-                    <button class="btn-copiar" onclick="copiarPix()">Copiar Chave PIX</button>
+                <div class="item-passo">
+                    <div class="numero">2</div>
+                    <p>Abra o aplicativo do seu banco e vá em <strong>PIX</strong>.</p>
+                </div>
+                <div class="item-passo">
+                    <div class="numero">3</div>
+                    <p>Escolha <strong>"PIX Copia e Cola"</strong> e cole o código.</p>
+                </div>
+                <div class="item-passo">
+                    <div class="numero">4</div>
+                    <p>Confirme os dados de <strong>Jorge De Melo Sá</strong> e finalize.</p>
                 </div>
             </div>
+
+            <div class="card-acao">
+                <span class="email-pix">maosquesalvam.org@gmail.com</span>
+                <button onclick="executarCopia(this)" class="botao-pix">
+                    📋 Copiar Chave PIX
+                </button>
+                <div id="aviso-copiado" class="aviso-sucesso" style="display:none;">
+                    ✅ Copiado com sucesso!
+                </div>
+            </div>
+
+            <div class="info-seguranca">
+                <p><strong>Favorecido:</strong> Jorge De Melo Sá</p>
+                <p>Responsável pelo abrigo • Transparência total</p>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Mãos Que Salvam - Criado com amor pelos animais.</p>
-    </footer>
-
-    <script>
-    function copiarPix() {
-        // Seleciona o texto da chave pelo ID
-        const textoChave = document.getElementById("chave-pix").innerText;
+    <footer class="rodape-principal">
+    <div class="container-rodape">
         
-        // Copia para a área de transferência
-        navigator.clipboard.writeText(textoChave).then(() => {
-            // Seleciona o botão pela classe correta (btn-copiar)
-            const botao = document.querySelector(".btn-copiar");
-            const textoOriginal = botao.innerText;
-            
-            botao.innerText = "✅ Copiado!";
-            botao.style.backgroundColor = "#27ae60"; // Muda para verde
-            
-            // Volta ao normal depois de 2 segundos
-            setTimeout(() => {
-                botao.innerText = textoOriginal;
-                botao.style.backgroundColor = ""; // Volta para a cor original do CSS
-            }, 2000);
-        }).catch(err => {
-            console.error('Erro ao copiar: ', err);
-            alert("Não foi possível copiar automaticamente. Por favor, selecione o texto manualmente.");
-        });
-    }
-    </script>
+        <div class="coluna-rodape">
+            <h3>🐾 Mãos Que Salvam</h3>
+            <p>Transformando dor em esperança em Xapuri-AC há mais de 11 anos.</p>
+            <p class="cnpj"><strong>CNPJ:</strong> 00.000.000/0001-00</p> </div>
+
+        <div class="coluna-rodape">
+            <h3>Contato</h3>
+            <ul class="lista-contato">
+                <li><a href="https://wa.me/5568999999999" target="_blank">📞 (68) 99999-9999</a></li>
+                <li><a href="mailto:doecasacanina@gmail.com">✉️ doecasacanina@gmail.com</a></li>
+                <li>📍 Xapuri, Acre - Brasil</li>
+            </ul>
+        </div>
+
+       <div class="coluna-rodape">
+    <h3>Siga nossa rotina</h3>
+    <div class="redes-sociais-icones">
+        <a href="https://www.instagram.com/maosquesalvam.ong?igsh=dW4ybzlraGU5ZXZ4" target="_blank" class="link-icone">
+            <img src="icons8-instagram-48.png" alt="Siga-nos no Instagram" class="img-social">
+        </a>
+
+        <a href="LINK_DO_FACEBOOK_AQUI" target="_blank" class="link-icone">
+            <img src="icons8-facebook-novo-48.png" alt="Siga-nos no Facebook" class="img-social">
+        </a>
+    </div>
+</div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mãos Que Salvam - Criado com amor pelos animais.</p>
+    </div>
+</footer>
 
     <script>
-    // Esse código limpa a "âncora" da URL e joga o scroll para o topo
+    function executarCopia(botao) {
+        const email = "doecasacanina@gmail.com";
+        
+        // Cria elemento temporário para copiar (funciona em tudo)
+        const temp = document.createElement("input");
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+
+        // Feedback visual
+        const textoOriginal = botao.innerHTML;
+        const aviso = document.getElementById("aviso-copiado");
+
+        botao.innerHTML = "✅ Copiado!";
+        botao.style.backgroundColor = "#27ae60";
+        if(aviso) aviso.style.display = "block";
+
+        setTimeout(() => {
+            botao.innerHTML = textoOriginal;
+            botao.style.backgroundColor = ""; 
+            if(aviso) aviso.style.display = "none";
+        }, 2000);
+    }
+
+    // Limpa a URL ao recarregar
     if (window.location.hash) {
         window.scrollTo(0, 0);
         history.replaceState("", document.title, window.location.pathname);
     }
-</script>
+    </script>
+
+<div id="modal-pet" class="modal">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <div id="detalhes-pet">
+            </div>
+    </div>
+</div>
 
 </body>
 </html>
