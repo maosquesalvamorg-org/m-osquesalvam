@@ -1,5 +1,5 @@
 function copiarChave() {
-    const chave = "doecasacanina@gmail.com";
+    const chave = "maosquesalvam.org@gmail.com";
     const aviso = document.getElementById("aviso-copiado");
 
     // Tenta o método moderno primeiro
